@@ -1,0 +1,19 @@
+<nav>
+  <div class="nav-wrapper">
+    <a routerLink="#!" class="brand-logo">Logo</a>
+    <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="setInicioSesion"><a routerLink="sass.html">Sass</a></li>
+      <li *ngIf="setInicioSesion"><a routerLink="badges.html">Components</a></li>
+      <li *ngIf="setInicioSesion"><a routerLink="/autenticacion/cerrar-sesion">Cerrar sesión</a></li>
+      <li *ngIf="!setInicioSesion"><a routerLink="/autenticacion/login">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li *ngIf="setInicioSesion"><a routerLink="sass.html">Sass</a></li>
+  <li *ngIf="setInicioSesion"><a routerLink="badges.html">Components</a></li>
+  <li *ngIf="setInicioSesion"><a routerLink="collapsible.html">Javascript</a></li>
+  <li *ngIf="!setInicioSesion"><a routerLink="mobile.html">Mobile</a></li>
+</ul>
